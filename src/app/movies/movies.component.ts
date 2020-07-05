@@ -8,20 +8,21 @@ import {fakeMovies} from '../fake-movies';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movie: Movie = {
-    id: 1,
-    name: 'Star Wars',
-    releaseYear: 1977
-  };
-  movies = fakeMovies;
 
   constructor() {
   }
 
-  ngOnInit(): void {
-  }
+  // movie: Movie = {
+  //   id: 1,
+  //   name: 'Star Wars',
+  //   releaseYear: 1977
+  // };
+  movies = fakeMovies;
 
   selectedMovie: Movie;
+
+  ngOnInit(): void {
+  }
 
   onSelect(movie: Movie): void {
     this.selectedMovie = movie;

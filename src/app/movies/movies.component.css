@@ -6,7 +6,7 @@
 }
 
 .movies .movieListItem {
-  font-size: 0.875em;
+  font-size: 0.9375em;
   font-family: Georgia, Serif;
   background: #cce5ff;
   padding: 0.3em;
@@ -16,4 +16,16 @@
 .selected {
   background: mediumseagreen !important;
   color: white;
+}
+.parent {
+  display: flex;
+}
+.details {
+  background: mediumseagreen;
+  color: white;
+  padding: 0.5em;
+  margin: 1em;
+  max-width: 16em;
+  text-align: left;
+  font-size: 0.9375em;
 }
