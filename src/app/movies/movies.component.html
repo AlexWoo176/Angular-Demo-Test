@@ -1,20 +1,24 @@
-<!--<h1>Movie's Details: </h1>-->
-<!--<div><span>Id: </span>{{movie.id}}</div>-->
-<!--<div><span>Name: </span>{{movie.name | uppercase}}</div>-->
-<!--<div><span>Release Year: </span>{{movie.releaseYear}}</div>-->
-<!--<h2>Edit your Information: </h2>-->
-<!--<div style="margin: 10px; text-align: left;">-->
-<!--  <label>Movie name (data-binding one-way):-->
-<!--    <input [ngModel]="movie.name" placeholder="Enter movie's name">-->
-<!--  </label>-->
-<!--</div>-->
-<!--<div style="margin: 10px; text-align: left;">-->
-<!--  <label>Release year(data-binding two-way):-->
-<!--    <input [(ngModel)]="movie.releaseYear" placeholder="Enter release year"> &lt;!&ndash;2 way binding&ndash;&gt;-->
-<!--  </label>-->
-<!--</div>-->
 
-<h2>My favorite movies</h2>
+<div style="text-align: left;">
+  <table style="width: 360px">
+    <tr>
+      <td>New Movie's Name:</td>
+      <td>
+        <input #movieName placeholder="name">
+      </td>
+    </tr>
+    <tr>
+      <td>Release Year:</td>
+      <input #releaseYear placeholder="release year">
+    </tr>
+    <tr>
+      <button (click)="add(movieName.value, releaseYear.value); movieName.value=''; releaseYear.value=''">
+        Add
+      </button>
+    </tr>
+  </table>
+</div>
+
 <div class="parent">
   <ol class="movies">
     <li class="movieListItem"
@@ -24,6 +28,5 @@
       </a>
     </li>
   </ol>
-  <!-- <app-movie-detail [movie]="selectedMovie"></app-movie-detail> -->
 </div>
 
