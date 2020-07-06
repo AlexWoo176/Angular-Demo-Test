@@ -1,4 +1,3 @@
-
 <div style="text-align: left;">
   <table style="width: 360px">
     <tr>
@@ -26,6 +25,7 @@
       <a routerLink="/detail/{{eachMovie.id}}" style="text-decoration: none;">
         {{eachMovie.name}} - {{eachMovie.releaseYear}}
       </a>
+      <button title="delete movie" (click)="delete(eachMovie.id)">X</button>
     </li>
   </ol>
 </div>
