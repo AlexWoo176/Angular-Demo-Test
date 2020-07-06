@@ -11,34 +11,26 @@ import {MovieService} from '../movie.service';
 export class MoviesComponent implements OnInit {
   // movie: Movie = {
   //   id: 1,
-  //   name: 'Star Wars',
+  //   name: "Star Wars",
   //   releaseYear: 1977
-  // };
+  // }
   // movies = fakeMovies;
   movies: Movie[];
-
   constructor(private movieService: MovieService) {
 
   }
-
   getMoviesFromServices(): void {
     // this.movies = this.movieService.getMovies();
-    this.movieService.getMovies().subscribe(
-      (updateMovies) => {
-        this.movies = updateMovies;
-      }
-    );
+    this.movieService.getMovies().subscribe(updatedMovies => this.movies = updatedMovies);
   }
-
   ngOnInit(): void {
     this.getMoviesFromServices();
   }
-
   // Action when select a Movie in List item
   // selectedMovie: Movie;
   // onSelect(movie: Movie): void {
-  //   this.selectedMovie = movie;
-  //   console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
-  //   // alert(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
+  //     this.selectedMovie = movie;
+  //     console.log(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
+  //     // alert(`selectedMovie = ${JSON.stringify(this.selectedMovie)}`);
   // }
 }
